@@ -2,7 +2,7 @@
 import { SafeAreaView, StyleSheet, Text, View, StatusBar } from 'react-native';
 import List from "./src/List"
 import Detail from "./src/Detail"
-import Karakter from "./src/Karakter"
+import Character from "./src/Character"
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -19,7 +19,7 @@ export default function App() {
         <Stack.Navigator initialRouteName="List">
           <Stack.Screen name="List" component={List} />
           <Stack.Screen name="Detail" component={Detail} />
-          <Stack.Screen name="Karakter" component={Karakter} />
+          <Stack.Screen name="Character" component={Character} />
         </Stack.Navigator>
       </NavigationContainer>
 

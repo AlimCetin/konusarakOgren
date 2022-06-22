@@ -44,7 +44,7 @@ export default function Detail({ navigation, route }) {
               round
               size="large"
               color="success"
-              onPress={() => navigation.navigate("Karakter", url)}
+              onPress={() => navigation.navigate("character", url)}
             >
               {url}
             </Button>
