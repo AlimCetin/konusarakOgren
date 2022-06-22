@@ -28,7 +28,8 @@ export default function Character({ route, navigation }) {
       <Text> status : {datacharacter?.status}</Text>
       <Text> type : {datacharacter?.type}</Text>
       <Text> url : {datacharacter?.url}</Text>
-      <Image source={require(datacharacter?.image)} />
+      <Image source={{uri:datacharacter?.image }}
+       style={{width: 400, height: 400}} />
     </View>
   );
 }

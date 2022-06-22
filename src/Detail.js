@@ -33,10 +33,10 @@ export default function Detail({ navigation, route }) {
 
   return (
     <View>
-      <Text>air_date : ({dataDetail?.air_date})</Text>
-      <Text>created : ({dataDetail?.created})</Text>
-      <Text>episode : ({dataDetail?.episode})</Text>
-      <Text>name : ({dataDetail?.name})</Text>
+      <Text>air_date : {dataDetail?.air_date}</Text>
+      <Text>created : {dataDetail?.created}</Text>
+      <Text>episode : {dataDetail?.episode}</Text>
+      <Text>name : {dataDetail?.name}</Text>
       <ScrollView  >
         {dataDetail?.characters?.map((url) => {
           return (
@@ -44,7 +44,7 @@ export default function Detail({ navigation, route }) {
               round
               size="large"
               color="success"
-              onPress={() => navigation.navigate("character", url)}
+              onPress={() => navigation.navigate("Character", url)}
             >
               {url}
             </Button>
