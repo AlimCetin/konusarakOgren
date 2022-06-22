@@ -1,6 +1,14 @@
 import React, { useState, useEffect } from "react";
 
-import { SafeAreaView, StyleSheet, Text, View, StatusBar,Button } from "react-native";
+import {
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  View,
+  StatusBar,
+  ScrollView,
+} from "react-native";
+import { Button, Card } from "galio-framework";
 
 export default function Detail({ navigation, route }) {
   const [dataDetail, setDataDetail] = useState({});
@@ -29,14 +37,20 @@ export default function Detail({ navigation, route }) {
       <Text>created : ({dataDetail?.created})</Text>
       <Text>episode : ({dataDetail?.episode})</Text>
       <Text>name : ({dataDetail?.name})</Text>
-      {dataDetail?.characters?.map((url) => {
-        return (
-          <Button
-            title={url}
-            onPress={() => navigation.navigate("Karakter", url)}
-          />
-        );
-      })}
+      <ScrollView  >
+        {dataDetail?.characters?.map((url) => {
+          return (
+            <Button
+              round
+              size="large"
+              color="success"
+              onPress={() => navigation.navigate("Karakter", url)}
+            >
+              {url}
+            </Button>
+          );
+        })}
+      </ScrollView>
     </View>
   );
 }

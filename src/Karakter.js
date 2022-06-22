@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import { SafeAreaView, StyleSheet, Text, View, StatusBar } from "react-native";
+import { Card } from "galio-framework";
 
 export default function Karakter({ route, navigation }) {
   const [dataDetail, setDataDetail] = useState({});
