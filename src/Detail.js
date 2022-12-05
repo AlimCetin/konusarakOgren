@@ -37,7 +37,7 @@ export default function Detail({ navigation, route }) {
       <Text>created : {dataDetail?.created}</Text>
       <Text>episode : {dataDetail?.episode}</Text>
       <Text>name : {dataDetail?.name}</Text>
-      <ScrollView  >
+      <ScrollView>
         {dataDetail?.characters?.map((url) => {
           return (
             <Button
